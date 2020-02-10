@@ -1,0 +1,6 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.pythonPath": "C:\\Users\\ADAM-PC\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
+    "liveServer.settings.port": 5501
+}

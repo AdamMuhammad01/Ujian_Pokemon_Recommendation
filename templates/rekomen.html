@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+</head>
+<body style="background-image: url({{ url_for('static',filename='cc.jpg') }});background-size: cover;">
+        <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Favorite Pokemon</h1>
+        <table style="background-color: whitesmoke; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" cellspacing="10">
+        <tr><td style="text-align: center;" rowspan="2"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{favoritku['#']}}.png"></td>
+            <td colspan="3" style="font-size: larger;"><b>{{favoritku['Name']}}</b></td>
+        </tr>
+        <tr>
+            <td>🚨 {{favoritku['Type 1']}}</td>
+            <td>♺ {{favoritku['Generation']}}</td>
+            <td>🔵 {{favoritku['Legendary']}}</td>
+        </tr>
+        </table>
+        <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">You might also like this Pokemon</h1>
+        {% for i in rekomen%}
+        <table style="background-color:whitesmoke; display: inline-block;  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" cellspacing="10">
+        <tr>
+        <td style="text-align: center;" rowspan="2">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{i['num']}}.png"></td>
+        <td colspan="3" style="font-size: larger;"><b>{{i['name']}}</b></td>
+        </tr>
+        <tr>
+        <td>🚨 {{i['tipe']}}</td>
+        <td>♺ {{i['gen']}}</td>
+        <td>🔵 {{i['legend']}}</td>
+        </tr>
+        </table>
+        {% endfor %}
+        <br><br>
+        <center>
+        <form action = "http://127.0.0.1:5000">
+        <button style="height:45px;width:300px;font-size: 20px;text-align: center;line-height: 20px; background-color: tomato;color: cornsilk;">🔙Back</button>
+        </form>
+        </center>
+</body>
+</html>

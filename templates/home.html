@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+</head>
+<body style="background-image: url({{ url_for('static',filename='pok.jpg') }});background-size: cover;">
+    <center>
+    <img src="https://pluspng.com/img-png/pokemon-logo-png-pokemon-logo-png-2000.png" width="50%"><br><br><br>
+    <form method="POST" action = "http://127.0.0.1:5000/rekomendasi">
+    <input type="text" name="name" style="height:40px;width:500px" placeholder="Pokemon Favoritku" required><br><br><br>
+    <button style="height:45px;width:300px;font-size: 20px;text-align: center;line-height: 20px;background-color: rgb(243, 45, 45); color: cornsilk;">Search 🔍</button>
+    </form>
+    </center>
+</body>
+</html>
